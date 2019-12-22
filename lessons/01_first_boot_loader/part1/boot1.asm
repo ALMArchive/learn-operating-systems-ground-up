@@ -3,6 +3,7 @@
 boot:
     mov si, hello ; point si register to hello label memory location
     mov ah, 0x0e ; 0x0e means 'Write Character in TTY mode'
+    cld
 .loop:
     lodsb ; increments si each call
     or al, al ; is al == 0 ?
